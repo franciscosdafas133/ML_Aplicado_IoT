@@ -2,3 +2,5 @@
 __pycache__/
 .venv/
 RT_IOT2022_preparado.csv
+historial_conversacion.txt
+modificaciones_paper.txt
