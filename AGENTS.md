@@ -14,9 +14,9 @@ Si no existen, el contexto mínimo está en este archivo.
 - `20262_UP_ML_Porras_Pando_Delgado_PI_E1 (1).pdf`: paper de la Entrega 1. No modificarlo.
 - `20262_UP_ML_Proyecto_Integrador_Rúbrica_Entrega_1_v1_G01.xlsx`: rúbrica de la E1 (19/20).
 - `RT_IOT2022`: dataset original (123 117 filas).
-- `preparacion_datos.ipynb`: limpieza y selección de variables. Genera `RT_IOT2022_preparado.csv` (23 822 filas),
+- `preparacion_datos.ipynb`: limpieza y selección de variables. Genera `RT_IOT2022_preparado.csv` (117 922 filas),
   que no se versiona: hay que ejecutar este notebook antes que los demás.
-- `redes_neuronales.ipynb`: red neuronal (MLPClassifier). Terminado.
+- `redes_neuronales.ipynb`: red neuronal (MLPClassifier). Hay que reentrenarlo con el CSV nuevo.
 
 ## Reglas
 - Solo scikit-learn (nada de TensorFlow, PyTorch ni imbalanced-learn).
@@ -27,9 +27,12 @@ Si no existen, el contexto mínimo está en este archivo.
 - Responder en español.
 
 ## Decisiones vigentes
-- Clases foco del análisis: `NMAP_FIN_SCAN` (5 registros) y `Metasploit_Brute_Force_SSH` (35).
+- Duplicados: se eliminan solo los exactos (todas las columnas). Tras quitar `puerto_origen` y otras
+  variables, las filas que coinciden en features se conservan (temporalidades distintas, no duplicados
+  estrictos; criterio acordado con el profesor).
+- Clases foco del análisis: `NMAP_FIN_SCAN` (28 registros) y `Metasploit_Brute_Force_SSH` (36).
 - Los 4 modelos se entrenan con las 12 clases, con la misma partición 70/15/15 estratificada
   (`random_state=42`) y el mismo preprocesamiento.
 - Métricas prometidas en el paper: recall por clase, macro-F1 y matriz de confusión, contrastadas con la
   exactitud global. Los hiperparámetros se eligen por macro-F1 en validación.
-- Limitación principal: `NMAP_FIN_SCAN` tiene 1 sola fila en prueba, así que su recall solo puede valer 0 o 1.
+- Consecuencia: puede haber vectores idénticos en train/val/test; `DOS_SYN_Hping` sigue dominando (~76 %).
