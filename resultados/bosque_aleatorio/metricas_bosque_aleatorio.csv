@@ -1,0 +1,3 @@
+conjunto,exactitud,f1_macro,recall_macro,recall_SSH,recall_FIN,modelo,n_arboles,profundidad,obs_dividir,obs_hoja,n_atributos,peso_clases,criterio
+entrenamiento + validación,0.9999301627208604,0.9984578831786943,0.9996636729697462,1.0,1.0,Bosque aleatorio,100,,2,1,7,balanced_subsample,gini
+prueba,0.9981344338289332,0.9890154750229273,0.9914440955145567,1.0,1.0,Bosque aleatorio,100,,2,1,7,balanced_subsample,gini

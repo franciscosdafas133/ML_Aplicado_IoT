@@ -1,0 +1,13 @@
+clase,Árbol de decisión,Bosque aleatorio,KNN,Red neuronal
+ARP_poisioning,0.9851,0.9939,0.9921,0.9886
+DDOS_Slowloris,0.9625,0.975,0.975,0.9875
+DOS_SYN_Hping,1.0,1.0,1.0,1.0
+MQTT_Publish,0.9984,0.9984,0.9984,0.9984
+Metasploit_Brute_Force_SSH,1.0,1.0,1.0,1.0
+NMAP_FIN_SCAN,1.0,1.0,1.0,1.0
+NMAP_OS_DETECTION,1.0,1.0,1.0,1.0
+NMAP_TCP_scan,0.9933,1.0,1.0,1.0
+NMAP_UDP_SCAN,0.9742,0.9691,0.9716,0.9433
+NMAP_XMAS_TREE_SCAN,1.0,1.0,1.0,1.0
+Thing_Speak,0.9861,0.9913,0.9782,0.9782
+Wipro_bulb,0.8182,0.9697,0.9394,0.8788

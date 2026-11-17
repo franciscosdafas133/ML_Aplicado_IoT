@@ -1,0 +1,3 @@
+conjunto,exactitud,f1_macro,recall_macro,recall_SSH,recall_FIN,modelo,k,pesos,p
+entrenamiento + validación,0.9999301627208604,0.998457853528997,0.999638583283927,1.0,1.0,KNN,3,distance,2
+prueba,0.9971733845892928,0.9752241859202136,0.9878990818017029,1.0,1.0,KNN,3,distance,2

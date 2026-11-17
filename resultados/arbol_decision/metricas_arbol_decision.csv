@@ -1,0 +1,3 @@
+conjunto,exactitud,f1_macro,recall_macro,recall_SSH,recall_FIN,modelo,profundidad,obs_dividir,obs_hoja,peso_clases,criterio
+entrenamiento + validación,0.9978150908383466,0.9621754563073059,0.9528017062708231,0.7419354838709677,0.8333333333333334,Árbol de decisión,10,10,1,,entropy
+prueba,0.9969472553564362,0.9592384637098185,0.9764861856325521,1.0,1.0,Árbol de decisión,10,10,1,,entropy
